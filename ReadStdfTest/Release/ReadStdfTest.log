@@ -1,0 +1,11 @@
+﻿  debug_api.cpp
+  ReadStdfTest.cpp
+  stdf_v4_api.cpp
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_api.cpp(132,7): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  stdf_v4_file.cpp
+  stdf_v4_internal.cpp
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_internal.cpp(679,36): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_internal.cpp(803,36): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_internal.cpp(804,36): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_internal.cpp(889,36): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ITadmin\Desktop\Test\C\ReadStdfTest\ReadStdfTest\ReadStdfTest\stdf_v4_internal.cpp(1461,36): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

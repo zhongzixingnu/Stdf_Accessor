@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <string.h> // for strcpy()
+#include <chrono>
 
 #include "stdf_v4_file.h"
 
@@ -19,17 +20,30 @@ void check_status(STDF_FILE_ERROR e);
 
 int main(int argc, char** argv) {
 
-    string file1("C:\\Users\\ITadmin\\Desktop\\Test\\C\\ReadStdfTest\\ReadStdfTest\\ReadStdfTest\\test2.stdf");
-    string file2("C:\\Users\\ITadmin\\Desktop\\Test\\C\\ReadStdfTest\\ReadStdfTest\\ReadStdfTest\\test.txt");
+    string file1("C:\\Users\\ITadmin\\Desktop\\Test\\C\\ReadStdfTest\\ReadStdfTest\\ReadStdfTest\\test_big.std");
+    string file2("C:\\Users\\ITadmin\\Desktop\\Test\\C\\ReadStdfTest\\ReadStdfTest\\ReadStdfTest\\test_big.txt");
 
     try {
+        /*if (argc != 3) {
+            throw runtime_error("Std file or text file path not specified");
+        }*/
+
+        //tring stdf_file_name(argv[1]);
+        //string txt_file_path(argv[2]);
+
         string stdf_file_name(file1.c_str());
         string txt_file_path(file2.c_str());
 
         STDF_FILE* stdf_file = new STDF_FILE();
 
         cout << "Read Stdf ";
+        auto start_time = std::chrono::steady_clock::now();
         check_status(read_std_file(stdf_file_name, stdf_file));
+        auto end_time = std::chrono::steady_clock::now();
+
+        std::chrono::duration<double> elapsed_second = end_time - start_time;
+
+        cout << "Read std file elapsed time: " << elapsed_second.count() << endl;
 
         cout << "Write to txt file ";
         check_status(write_to_txt(txt_file_path, stdf_file));

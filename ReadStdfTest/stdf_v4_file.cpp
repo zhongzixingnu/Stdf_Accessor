@@ -89,8 +89,8 @@ STDF_FILE_ERROR STDF_FILE::read(const char* filename)
 	far_record->parse(header);
 
 	unsigned char cpu_type = far_record->get_cpu_type();
-	//TODO: check the cpu_type error
-    //if(cpu_type != 2) return STDF_FILE_ERROR::STDF_CPU_TYPE_NOT_SUPPORT;
+	//TODO: check the cpu_type error for .stdf file format
+    if(cpu_type != 2) return STDF_FILE_ERROR::STDF_CPU_TYPE_NOT_SUPPORT;
 
 	unsigned char stdf_version = far_record->get_stdf_version();
 	if(stdf_version != 4) return STDF_FILE_ERROR::STDF_VERSION_NOT_SUPPORT;
